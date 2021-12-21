@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+Disallow: /Welcome
+Disallow: /Welcome/countdownloads
+Sitemap:http://www.indsearch.org/sitemap.xml

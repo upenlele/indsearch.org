@@ -1,0 +1,23 @@
+# Customized error messages.
+ErrorDocument 404 /index.php
+
+# Set the default handler.
+DirectoryIndex index.php
+
+# Various rewrite rules.
+<IfModule mod_rewrite.c>
+RewriteEngine On 
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteRule ^([a-z0-9_-]+)\\.html$ index.php/page/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\\.php|asset|robots\\.txt)
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+# this not work other work true
+RewriteRule ^site/?$ site/web_design [L]
+
+</IfModule>

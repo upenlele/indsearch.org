@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>404</title>
+
+<link rel="icon" href="http://www.indsearch.org/assets/images/favicon.ico" type="image/icon" >
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="YGIDV3HaDsTPpCFNPhx8bNUnF8SMoiua5_LlJ6w8blk" />
+<link rel="stylesheet" href="http://www.indsearch.org/assets/css/bootstrap.min.css">
+<!--    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">-->
+<link href="http://www.indsearch.org/assets/css/font-awesome.min.css" rel='stylesheet' type='text/css' />
+
+<link rel="stylesheet" href="http://www.indsearch.org/assets/css/styles.css"/>
+<link href="http://www.indsearch.org/assets/css/color.css" rel="stylesheet"/>
+<link href="http://www.indsearch.org/assets/css/responsive.css" rel="stylesheet"/>
+<link href="http://www.indsearch.org/assets/css/jquery-ui.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://www.indsearch.org/assets/js/bootstrap.min.js"></script>
+<script src="http://www.indsearch.org/assets/js/jquery-ui.js" defer></script>
+<script src="http://www.indsearch.org/assets/js/linkURLFile.js"></script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WT8M9WS');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115498181-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115498181-1');
+</script>
+<!-- END Global site tag (gtag.js) - Google Analytics -->
+
+
+
+<style>
+        table td,table th{
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+@media screen and (min-width:1360px)
+{
+  .navbar-nav>li>a {
+      padding:4.98px 0px;
+  }
+  .menu_list li a {
+      padding: 9px 117.6px !important;
+      /*padding: 9px 48px !important;*/
+  }
+}
+@media screen and (max-width:767px){
+  ul.dropdown-menu > div.container {
+    padding-right: 0px !important;
+    padding-left: 0px !important;   
+  } 
+
+  .navbar-nav .open .dropdown-menu {
+    margin-bottom: 0px !important;
+  } 
+}
+
+/*glow btn start*/
+
+.registerbutton1 {
+  background-color: #921722 !important;
+  -webkit-border-radius: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #FFFFFF !important;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 13px;
+  padding:8px 21px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #921722; -webkit-box-shadow: 0 0 2px #FFFFFF; }
+  50% { background-color: #3b85c4; -webkit-box-shadow: 0 0 40px #FFFFFF;!important }
+  /* 100% { background-color: #3e58b7; -webkit-box-shadow: 0 0 3px #FFFFFF; }*/
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #921722; -webkit-box-shadow: 0 0 2px #FFFFFF; }
+  50% { background-color: #3b85c4; -webkit-box-shadow: 0 0 40px #FFFFFF; }
+  /* 100% { background-color: #3e58b7; -webkit-box-shadow: 0 0 3px #FFFFFF; }*/
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #921722; -webkit-box-shadow: 0 0 2px #FFFFFF; }
+  50% { background-color: #3b85c4; -webkit-box-shadow: 0 0 40px #FFFFFF; }
+ /* 100% { background-color: #3e58b7; -webkit-box-shadow: 0 0 3px #FFFFFF; }*/
+}
+
+@keyframes glowing {
+  0% { background-color: #921722; -webkit-box-shadow: 0 0 2px #FFFFFF; }
+  50% { background-color: #3b85c4; -webkit-box-shadow: 0 0 40px #FFFFFF; }
+  /* 100% { background-color: #3e58b7; -webkit-box-shadow: 0 0 3px #FFFFFF; }*/
+}
+
+.registerbutton1 {
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+color:#fff;
+}
+/*glow btn end*/
+
+</style>
+<script>
+  $( function() {    
+    $( "#search" ).autocomplete({
+      source: linkURLs,
+      minLength: 2,
+      select: function(event, ui) {
+            event.preventDefault();
+            doSearch(ui.item);
+        }      
+    });
+
+    function doSearch(term, location) {
+      $( "#search" ).val('');
+     // console.log('<?php echo base_url(); ?>' + term.value);
+     // window.location.href = '<?php echo base_url(); ?>' + term.value; //same window
+      window.open(
+      '<?php echo base_url(); ?>' + term.value,
+      '_blank') //new window
+      }
+  });
+  </script>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT8M9WS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<div id="body-section">
+<section id="logo_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-xs-12 col-sm-7 logo col-custom50"> <a href="http://www.indsearch.org/"><img src="http://www.indsearch.org/assets/images/logo.png" class="img-responsive"></a> </div>
+      <div class="col-md-7 col-xs-12 col-sm-5 col-custom50">
+        <!-- <form> -->
+          <div class="form-group pull-right form_top">
+          <!-- temporary comment, will be reverted back after athang 2018 -->
+             <input type="text" class="form-control" name="search" id="search" placeholder="Search"/> 
+
+            <!--<button type="button" onclick="window.open('http://www.indsearch.org/athang_2018')" style="margin-left:0px;font-size: 15px;padding: 10px;" class="registerbutton1">Athang 2018</button>-->
+
+          </div>
+        <!-- </form> -->
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <!-- <a class="navbar-brand" href="#"></a>-->
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" id="mainmenu">
+          <li class="active"><a href="http://www.indsearch.org/">Home</a></li>
+          <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us</a>
+            <ul class="dropdown-menu">
+              <div class="container">
+                <div class="col-md-4 offsetvalue-1" style="padding:0px;">
+                      <li><a href="http://www.indsearch.org/aboutus">About IndSearch</a></li>
+                      <li><a href="http://www.indsearch.org/director-general-communique">Honorary Directors General's<br>Communique</a></li>
+                      <li><a href="http://www.indsearch.org/directors-word-of-advice">Director’s word of advice </a></li>
+                      <li><a href="http://www.indsearch.org/global-alliance">Global Alliance</a></li>
+                      <li><a href="http://www.indsearch.org/entrepreneurship">Entrepreneurship</a></li>
+                      <li><a href="http://www.indsearch.org/executive-education">Executive Education</a></li>
+                      <li><a href="http://www.indsearch.org/social-impact">Social Impact</a></li>
+                </div>
+              </div>
+            </ul>
+          </li>
+          <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Campus</a>
+            <ul class="dropdown-menu">
+			<div class="container">
+			<div class="col-md-4 offsetvalue-2" style="padding:0px;">
+              <li><a href="http://www.indsearch.org/enriched-environment">Enriched Environment</a></li>
+              <li><a href="http://www.indsearch.org/bavdhan-bio-diversity-campus">Bavdhan Bio-Diversity Campus</a></li>
+			  </div>
+			  </div>
+            </ul>
+          </li>
+          <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Placements</a>
+            <ul class="dropdown-menu">
+			<div class="container">
+			<div class="col-md-4 offsetvalue-3" style="padding:0px;">
+              <li><a href="http://www.indsearch.org/career-development-cell">Career Development Cell </a></li>
+              <li><a href="http://www.indsearch.org/our-recruiters">Our Recruiters</a></li>
+              <li><a href="http://www.indsearch.org/corporate-review">Corporate Reviews </a></li>
+              <li><a href="https://www.youth4work.com/onlinetalenttest" target="_blank">AICTE Online Skill Test </a></li>
+			  </div>
+			  </div>
+            </ul>
+          </li>
+          <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty</a>
+            <ul class="dropdown-menu">
+			<div class="container">
+			<div class="col-md-4  offsetvalue-4" style="padding:0px;">
+              <li><a href="http://www.indsearch.org/about-the-director-general">About the Honorary Director General</a></li>
+              <li><a href="http://www.indsearch.org/about_the_director">About the Director</a></li>
+              <li><a href="http://www.indsearch.org/list-of-faculty">List of Faculty</a></li>
+			  </div>
+			  </div>
+            </ul>
+          </li>
+          <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Research</a>
+            <ul class="dropdown-menu">
+			<div class="container">
+			<div class="col-md-4 offsetvalue-5" style="padding:0px;">
+              <li><a href="http://www.indsearch.org/consultancy">Consultancy</a></li>
+			  </div>
+			  </div>
+            </ul>
+          </li>
+          <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Alumni</a>
+            <ul class="dropdown-menu">
+			<div class="container">
+			<div class="col-md-4  offsetvalue-6" style="padding:0px;">
+              <li><a href="http://www.indsearch.org/alumnus">Alumnus</a></li>
+              <li><a href="http://www.indsearch.org/alumni-cell">Alumni Cell</a></li>
+              <li><a href="http://www.indsearch.org/alumni-review">Alumni Review</a></li>
+			  </div>
+			  </div>
+            </ul>
+          </li>
+          <!--<li><a href="#">News</a></li>-->
+          <li><a href="http://www.indsearch.org/contactus">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var toggleStatus = false;
+        var str=location.href.toLowerCase();
+        $('#mainmenu li a').each(function() {
+            if (this.href.toLowerCase() == str) {
+                $("li.active").removeClass("active");
+                $(this).parent().addClass("active");
+
+            }
+        });
+        $('#mainmenu li .active').parents().each(function(){
+            if ($(this).is('li')){
+                $(this).addClass("active");
+            }
+        });
+
+       $(".dropdown").hover(
+           function() {
+               $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true);
+               $(this).toggleClass('open');
+           },
+           function() {
+               $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true);
+               $(this).toggleClass('open');
+           }
+       );
+      
+       $(".dropdown").click(
+        function() {
+            $('.dropdown-menu', this).toggle();
+            if (toggleStatus==false)
+            {
+              $('.dropdown-menu', this).parent().removeClass('open');
+              toggleStatus=true;
+            } else {              
+              toggleStatus=false;              
+            }            
+         }
+       );
+
+       $('.navbar-toggle').click(
+          function() {
+            $(".shadowshapeleft").toggle();
+            $(".shadowshaperight").toggle();
+            $(".overlayhome").toggle();
+          }
+        );
+
+      $('ul.nav li.dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(100);
+      }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(100);
+      });
+
+    });
+</script>
+<!--End Header-->
+<!--Body-->
+<div class="container">
+<div class="row" style="margin-top: 5%;">
+    <div class="col-md-6 text-justify">
+                    <div>
+                      <h1>Ooops! Error 404</h1>
+                    </div>
+                <p>We are sorry, we cannot find the page that you are looking for.
+Please visit our <a style="color:red;" href="http://www.indsearch.org/">homepage</a> to get started or choose a link below to find what you are looking for:</p>
+                
+               
+              </div>
+                <div class="col-md-6">
+                    <img src="http://www.indsearch.org/assets/images/404.png" style="width:100%;">
+                </div>
+               
+</div>
+</div>
+<!--Footer-->
+<style>
+    footer{
+        padding-top: 10px;
+        background-color: #e4e4e4;
+    }
+    #footernav li{border: 0;}
+    #footernav li a{padding: 3px 6px;color:#333;}
+    .footerp{font-size: 14px;}
+    #footernav li:last-of-type a{padding-right: 0px;}
+</style>
+
+    
+    <footer>
+    <div class="container">
+        <div class="row">
+            <div id="footer-wrapper" class="col-lg-12 col-md-12 footer-wrapper clearfix text-center" style="padding-left: 40%;">
+                <ul class="nav navbar-nav" id="footernav">
+                    <li class="active"><a href="http://www.indsearch.org/">Home</a></li>
+                    <li class="active"><a href="http://www.indsearch.org/aboutus">About Us</a></li>
+                    <li class="active"><a href="http://www.indsearch.org/contactus">Contact Us</a></li>
+                </ul>
+            </div>
+            <div id="footer-wrapper" style="margin-top: 10px; margin-bottom: 10px;" class="col-lg-12 col-md-12 footer-wrapper clearfix">
+                <div class="col-sm-8 pull-left" >
+                    <p class="footerp">Copyright © 2017 - IndSearch - All trademarks and logos are the sole property of their respective owners.</p>
+                </div>
+                <div class="col-sm-4 pull-right">
+                    <p class="footerp">Designed by <a href="https://www.srvmedia.com/" target="_blank">SRV Media</a> & Developed by <a href="https://easebuzz.in/" target="_blank">Easebuzz</a></p>
+                </div>
+            </div>
+
+            <div id="footer-wrapper" style="margin-top: 10px; margin-bottom: 10px;" class="col-lg-12 col-md-12 footer-wrapper clearfix text-center">
+                <span>
+                    <strong>
+                        This website is best viewed in Google Chrome and Mozilla Firefox (version 53 and above) with resolution 1280 x 720
+                    </strong>
+                </span>
+            </div>
+        
+    </div>
+    </div>
+    </footer>
+    
+    
+<script>
+   $(window).ready(function(){ 
+
+        $("marquee").hover(function () { 
+          this.stop();
+        }, function () {
+          this.start();
+        });
+
+        var heightvalue=$(".carousel-inner>.item").height();
+        $(".navbar-nav>li>.dropdown-menu").height(heightvalue);
+
+        $(".dropdown").hover(function(){
+        if($(".dropdown").hasClass("open"))
+        { 
+          
+          $(".shadowshapeleft").hide();
+          $(".shadowshaperight").hide();
+          $(".shadowshapeleft2").hide();
+          $(".shadowshaperight2").hide();
+          $(".shadowshapeleft3").hide();
+          $(".shadowshaperight3").hide();
+          $(".shadowshapeleft4").hide();
+          $(".shadowshaperight4").hide();
+          $(".shadowshapeleft5").hide();
+          $(".shadowshaperight5").hide();
+          $("#myCarousel").carousel('pause'); 
+          $(".overlayhome").css("display","block");
+          $(".overlayhome2").css("display","block"); 
+          $(".overlayhome3").css("display","block");    
+          $(".overlayhome4").css("display","block");      
+          $(".overlayhome5").css("display","block");      
+        }
+        else
+        {
+         $(".shadowshapeleft").show(); 
+         $(".shadowshaperight").show();
+         $(".shadowshapeleft2").show(); 
+         $(".shadowshaperight2").show();
+         $(".shadowshapeleft3").show(); 
+         $(".shadowshaperight3").show();
+         $(".shadowshapeleft4").show(); 
+         $(".shadowshaperight4").show();
+         $(".shadowshapeleft5").show(); 
+         $(".shadowshaperight5").show();
+         $("#myCarousel").carousel('cycle');
+         $(".overlayhome").css("display","none");
+         $(".overlayhome2").css("display","none");
+         $(".overlayhome3").css("display","none");
+         $(".overlayhome4").css("display","none");
+         $(".overlayhome5").css("display","none");
+        }
+    })
+
+});
+</script>
+<style type="text/css">
+ li.dropdown>a.dropdown-toggle:hover .menu_list li
+{
+    display: none !important;
+}
+</style>
+<!-- <script>
+   $('ul.nav li.dropdown').hover(function() {
+       $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(100);
+   }, function() {
+       $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(100);
+   });
+</script> -->
+<!-- <script type="text/javascript">
+  $(document).ready(function(){
+    var heightvalue=$(".carousel-inner>.active img").height();
+   $(".navbar-nav>li>.dropdown-menu").height(heightvalue);
+  })
+</script> -->
+<script type="text/javascript">
+  $("table").addClass("table").wrap("<div class='table table-responsive'></div>");
+</script>
+<style type="text/css">
+  .table .table {
+    background:none;
+}
+</style>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99057661-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
